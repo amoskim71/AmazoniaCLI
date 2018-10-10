@@ -22,11 +22,21 @@ public class Product {
 		this.productPrize = productPrize;
 	}
 	
+	public Product() {
+		
+	}
+	
+	public void copyProduct(Product productToCopy) {
+		this.productId = productToCopy.getProductId();
+		this.productName = productToCopy.getProductName();
+		this.categoryId = productToCopy.getCategoryId();
+		this.productStock = productToCopy.getProductStock();
+		this.productPrize = productToCopy.getProductPrize();
+	}
+	
 	public boolean compareProduct(Product anotherProduct) {
 		boolean equals = false;
-		if(this.productId == anotherProduct.productId && this.productName.equals(anotherProduct.productName)
-			&& this.categoryId == anotherProduct.categoryId && this.productStock == anotherProduct.productStock 
-			&& this.productPrize == anotherProduct.productPrize) {
+		if(this.productId == anotherProduct.productId && this.categoryId == anotherProduct.categoryId) {
 			equals = true;
 		}
 		return equals;
@@ -34,10 +44,6 @@ public class Product {
 
 	public int getProductId() {
 		return productId;
-	}
-
-	public void setProductId(int productId) {
-		this.productId = productId;
 	}
 
 	public String getProductName() {
