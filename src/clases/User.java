@@ -11,8 +11,14 @@ public class User {
 	private Date lastLogin;
 	private int userId;
 	
-	public User(int userId, String email, String username,String password) {
-		this.userId = userId;
+	private static int generateId;
+	
+	static {
+		generateId = 0;
+	}
+	
+	public User(String email, String username,String password) {
+		this.userId = ++this.generateId;
 		this.email = email;
 		this.username = username;
 		this.password = password;

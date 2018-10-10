@@ -13,9 +13,12 @@ class UserTest {
 	@Test
 	void test() {
 		User joseLuis = new User("joseluisdelahozgarcia@gmail.com", "joseluishozg", "Pasw0rd");
-		assertEquals(joseLuis.getEmail(), "joseluisdelahozgarcia@gmail.com");
-		Date today = new Date();
-		System.out.println(today);
+		User andres = new User("andres@gmail.com", "andres", "Pasw0rd");
+		User alonso = new User("alonsos@gmail.com", "alonso", "Pasw0rd");
+		assertEquals(joseLuis.getUserId(), 1);
+		assertEquals(andres.getUserId(), 2);
+		assertEquals(alonso.getUserId(), 3);
+		System.out.println(andres.getLastLogin());
 	}
 
 }

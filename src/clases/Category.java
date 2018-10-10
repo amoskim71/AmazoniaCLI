@@ -5,8 +5,14 @@ public class Category {
 	private int categoryId;
 	private String categoryName;
 	
-	public Category(int categoryId, String categoryName) {
-		this.categoryId = categoryId;
+	private static int generateId;
+	
+	static {
+		generateId = 0;
+	}
+	
+	public Category(String categoryName) {
+		this.categoryId = ++generateId;
 		this.categoryName = categoryName;
 	}
 	

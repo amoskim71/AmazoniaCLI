@@ -1,15 +1,25 @@
 package clases;
+
 public class Product {
 	
 	private int productId;
 	private String productName;
 	private int categoryId;
 	private int productStock;
-	private int productPrize;
+	private double productPrize;
 	
-	public Product(int productId, String productName) {
-		this.productId = productId;
+	private static int generateId;
+	
+	static {
+		generateId = 0;
+	}
+	
+	public Product(String productName, int categoryId, int productStock, double productPrize) {
+		this.productId = ++generateId;
 		this.productName = productName;
+		this.categoryId = categoryId;
+		this.productStock = productStock;
+		this.productPrize = productPrize;
 	}
 	
 	public boolean compareProduct(Product anotherProduct) {
@@ -54,7 +64,7 @@ public class Product {
 		this.productStock = productStock;
 	}
 
-	public int getProductPrize() {
+	public double getProductPrize() {
 		return productPrize;
 	}
 
