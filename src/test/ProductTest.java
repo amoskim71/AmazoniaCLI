@@ -3,8 +3,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import clases.Category;
-import clases.Product;
+import model.Category;
+import model.Product;
 
 class ProductTest {
 
