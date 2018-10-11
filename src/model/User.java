@@ -10,6 +10,7 @@ public class User {
 	private String password;
 	private Date lastLogin;
 	private int userId;
+	private boolean admin;
 	
 	private static int generateId;
 	
@@ -17,11 +18,12 @@ public class User {
 		generateId = 0;
 	}
 	
-	public User(String email, String username,String password) {
+	public User(String email, String username,String password, boolean admin) {
 		this.userId = ++this.generateId;
 		this.email = email;
 		this.username = username;
 		this.password = password;
+		this.admin = admin;
 		lastLogin = new Date();
 	}
 
@@ -51,6 +53,14 @@ public class User {
 
 	public Date getLastLogin() {
 		return lastLogin;
+	}
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
 	}
 
 	public int getUserId() {
