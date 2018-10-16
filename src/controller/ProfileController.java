@@ -5,12 +5,12 @@ import java.util.List;
 import model.*;
 import view.ProfileView;
 
-public class LoginController extends Controller{
+public class ProfileController extends Controller{
 	
 	private ProfileView view;
 	private User model;
 	
-	public LoginController(ProfileView view, User model) {
+	public ProfileController(ProfileView view, User model) {
 		this.view = view;
 		this.model = model;
 	}
