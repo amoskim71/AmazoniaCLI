@@ -1,7 +1,9 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class User {
 	
@@ -12,11 +14,9 @@ public class User {
 	private int userId;
 	private boolean admin;
 	
-	private static int generateId;
+	private List<Product> productHistory;
 	
-	static {
-		generateId = 0;
-	}
+	private static int generateId = 0;
 	
 	public User(String email, String username,String password, boolean admin) {
 		this.userId = ++this.generateId;
@@ -25,8 +25,39 @@ public class User {
 		this.password = password;
 		this.admin = admin;
 		lastLogin = new Date();
+		productHistory = new ArrayList();
+	}
+	
+	public void buyProduct(Product productToBuy, int amount) {
+		Product copy = new Product();
+		copy.copyProduct(productToBuy);
+		copy.setProductStock(amount);
+		productHistory.add(copy);
+	}
+	
+	public void buyProduct(Product productToBuy) {
+		this.buyProduct(productToBuy, 1);
+	}
+	
+	public boolean containsProduct(Product product) {
+		boolean contain = false;
+		for(int i = 0; i < productHistory.size(); i++) {
+			if(product.compareProduct(productHistory.get(i))) {
+				contain = true;
+				break;
+			}
+		}
+		return contain;
+	}
+	
+	public Product getProductFromHistory(int index) {
+		return productHistory.get(index);
 	}
 
+	public List<Product> getProductHistory() {
+		return this.productHistory;
+	}
+	
 	public String getEmail() {
 		return email;
 	}

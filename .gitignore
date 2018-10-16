@@ -1,4 +1,5 @@
 /bin/
-config
+/config
 /src/clases/
 /.DS_Store
+/src/model/.DS_Store

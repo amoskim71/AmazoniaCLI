@@ -12,9 +12,9 @@ class UserTest {
 
 	@Test
 	void test() {
-		User joseLuis = new User("joseluis@mail.com", "joseluishozg", "Pasw0rd");
-		User andres = new User("andres@gmail.com", "andres", "Pasw0rd");
-		User alonso = new User("alonsos@gmail.com", "alonso", "Pasw0rd");
+		User joseLuis = new User("joseluis@mail.com", "joseluishozg", "pass", false);
+		User andres = new User("andres@gmail.com", "andres", "Pasw0rd", false);
+		User alonso = new User("alonsos@gmail.com", "alonso", "Pasw0rd", false);
 		assertEquals(joseLuis.getUserId(), 1);
 		assertEquals(andres.getUserId(), 2);
 		assertEquals(alonso.getUserId(), 3);
