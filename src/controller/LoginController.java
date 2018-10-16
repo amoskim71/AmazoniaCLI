@@ -1,0 +1,39 @@
+package controller;
+
+import java.util.Date;
+import java.util.List;
+import model.*;
+import view.ProfileView;
+
+public class LoginController extends Controller{
+	
+	private ProfileView view;
+	private User model;
+	
+	public LoginController(ProfileView view, User model) {
+		this.view = view;
+		this.model = model;
+	}
+	
+	public String getUsername() {
+		return model.getUsername();
+	}
+	
+	public String getEmail() {
+		return model.getEmail();
+	}
+	
+	public Date getLastLogin() {
+		return model.getLastLogin();
+	}
+	
+	public List<Product> getProductHistory(){
+		return model.getProductHistory();
+	}
+	
+	@Override
+	public void loadView() {
+		view.printView(getUsername(), getEmail(), getLastLogin(), getProductHistory());
+		clearView();
+	}
+}
