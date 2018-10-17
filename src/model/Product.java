@@ -8,11 +8,7 @@ public class Product {
 	private int productStock;
 	private double productPrize;
 	
-	private static int generateId;
-	
-	static {
-		generateId = 0;
-	}
+	private static int generateId = 0;
 	
 	public Product(String productName, int categoryId, int productStock, double productPrize) {
 		this.productId = ++generateId;
@@ -74,7 +70,7 @@ public class Product {
 		return productPrize;
 	}
 
-	public void setProductPrize(int productPrize) {
+	public void setProductPrize(double productPrize) {
 		this.productPrize = productPrize;
 	}
 }
