@@ -5,11 +5,7 @@ public class Category {
 	private int categoryId;
 	private String categoryName;
 	
-	private static int generateId;
-	
-	static {
-		generateId = 0;
-	}
+	private static int generateId = 0;
 	
 	public Category(String categoryName) {
 		this.categoryId = ++generateId;
@@ -26,5 +22,10 @@ public class Category {
 	
 	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
+	}
+	
+	@Override
+	public String toString() {
+		return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + "]";
 	}
 }
