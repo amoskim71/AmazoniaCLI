@@ -17,7 +17,7 @@ public class Main {
 		userList.add(new User("user@mail.com", "user", "user", false));
 		userList.add(new User("admin@mail.com", "admin", "admin", true));
 		Scanner input = new Scanner(System.in);
-		do {
+		do{
 			Controller.clearView();
 			printLogin();
 			MenuController menu = new MenuController(new MenuView(), user, productList, categoryList);
