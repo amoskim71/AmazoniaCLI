@@ -85,6 +85,10 @@ public class User {
 	public Date getLastLogin() {
 		return lastLogin;
 	}
+	
+	public void setLastLogin() {
+		this.lastLogin = new Date();
+	}
 
 	public boolean isAdmin() {
 		return admin;

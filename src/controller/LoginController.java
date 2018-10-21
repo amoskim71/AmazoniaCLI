@@ -21,12 +21,12 @@ public class LoginController extends Controller{
 		return login;
 	}
 	
-	@Override
 	public void loadView() {
 		// TODO Auto-generated method stub
 		view.printView();
 		if(authentication(view.getUsername(), view.getPassword(), model)) {
 			System.out.println("Success login");
+			model.setLastLogin();
 		}else {
 			clearView();
 			System.out.println("Incorrect username or password");
