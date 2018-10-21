@@ -2,6 +2,8 @@ package controller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
+
 import model.*;
 import view.ProfileView;
 
@@ -31,9 +33,9 @@ public class ProfileController extends Controller{
 		return model.getProductHistory();
 	}
 	
-	@Override
 	public void loadView() {
 		view.printView(getUsername(), getEmail(), getLastLogin(), getProductHistory());
+		pauseUntilInput();
 		clearView();
 	}
 }

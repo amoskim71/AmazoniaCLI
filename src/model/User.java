@@ -28,17 +28,36 @@ public class User {
 		productHistory = new ArrayList();
 	}
 	
+	/**
+	 * User can buy an amount of products.
+	 * 
+	 * @param productToBuy
+	 * @param amount
+	 */
 	public void buyProduct(Product productToBuy, int amount) {
+		//TODO: implement availableStock to know if i can buy an amount of products.
+		productToBuy.setProductStock(productToBuy.getProductStock() - amount);
 		Product copy = new Product();
 		copy.copyProduct(productToBuy);
 		copy.setProductStock(amount);
 		productHistory.add(copy);
 	}
 	
+	/**
+	 * User can buy one product.
+	 * 
+	 * @param productToBuy
+	 */
 	public void buyProduct(Product productToBuy) {
 		this.buyProduct(productToBuy, 1);
 	}
 	
+	/**
+	 * Return true if User have bought the same product.
+	 * 
+	 * @param product
+	 * @return
+	 */
 	public boolean containsProduct(Product product) {
 		boolean contain = false;
 		for(int i = 0; i < productHistory.size(); i++) {
@@ -100,5 +119,11 @@ public class User {
 
 	public int getUserId() {
 		return userId;
+	}
+
+	@Override
+	public String toString() {
+		return "User [email=" + email + ", username=" + username + ", password=" + password + ", lastLogin=" + lastLogin
+				+ ", userId=" + userId + ", admin=" + admin + ", productHistory=" + productHistory + "]";
 	}
 }

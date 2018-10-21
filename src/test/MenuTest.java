@@ -26,6 +26,7 @@ class MenuTest {
 		categoryList.add(books);
 		productList.add(product1);
 		productList.add(product2);
+		andres.buyProduct(product1);
  		MenuController control = new MenuController(new MenuView(), andres, productList, categoryList);
  		control.loadView();
  		assertEquals(books.getCategoryId(), 1);

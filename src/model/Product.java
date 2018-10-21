@@ -22,6 +22,11 @@ public class Product {
 		
 	}
 	
+	/**
+	 * Copy all the attributes of the class Product from one product to another.
+	 * 
+	 * @param productToCopy
+	 */
 	public void copyProduct(Product productToCopy) {
 		this.productId = productToCopy.getProductId();
 		this.productName = productToCopy.getProductName();
@@ -30,12 +35,40 @@ public class Product {
 		this.productPrize = productToCopy.getProductPrize();
 	}
 	
+	/**
+	 * Return true if two products have the same productId.
+	 * 
+	 * @param anotherProductx
+	 * @return true if equals
+	 */
 	public boolean compareProduct(Product anotherProduct) {
 		boolean equals = false;
-		if(this.productId == anotherProduct.productId && this.categoryId == anotherProduct.categoryId) {
+		if(this.productId == anotherProduct.productId) {
 			equals = true;
 		}
 		return equals;
+	}
+	
+	/**
+	 * Get product prize in dollars
+	 * 
+	 * @return prizes * 1.15 USD
+	 */
+	public double getPrizeUSD() {
+		return getProductPrize() * 1.15;
+	}
+	
+	/**
+	 * if it is available stock return true
+	 * 
+	 * @return true if have more than 0 productStock
+	 */
+	public boolean availableStock() {
+		boolean available = false;
+		if(this.getProductStock() > 0) {
+			available = true;
+		}
+		return available;
 	}
 
 	public int getProductId() {
@@ -72,5 +105,11 @@ public class Product {
 
 	public void setProductPrize(double productPrize) {
 		this.productPrize = productPrize;
+	}
+	
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", productName=" + productName + ", categoryId=" + categoryId
+				+ ", productStock=" + productStock + ", productPrize=" + productPrize + "]";
 	}
 }

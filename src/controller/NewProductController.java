@@ -15,7 +15,6 @@ public class NewProductController extends Controller{
 		this.view = view;
 	}
 	
-	@Override
 	public void loadView() {
 		try {
 			view.printView();	
@@ -24,7 +23,6 @@ public class NewProductController extends Controller{
 			System.out.println("An error ocurred during input product. Please try again.\n");
 			loadView();
 		}
-		
 		productList.add(view.getProduct());
 	}
 	

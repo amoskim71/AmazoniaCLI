@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import controller.ShowProductController;
 import model.*;
 
 public class ProfileView{
@@ -19,11 +20,9 @@ public class ProfileView{
 		for(int i = 0; i < productList.size(); i++) {
 			System.out.println("Name: " + productList.get(i).getProductName());
 			System.out.println("Prize: " + productList.get(i).getProductPrize());
-			System.out.println("Amount: " + productList.get(i).getProductStock() + "\n");
+			System.out.println("Amount: " + productList.get(i).getProductStock());
+			System.out.println("Id: " + productList.get(i).getProductId() + "\n");
 		}
 		System.out.println("------------------------\n");
-		System.out.print("\nInput something to exit: ");
-		Scanner input = new Scanner(System.in);
-		String exit = input.nextLine();
 	}
 }

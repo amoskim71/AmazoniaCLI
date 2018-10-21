@@ -2,7 +2,7 @@
 
 ## Árbol del proyecto
 
-- docs: ficheros para la página web.
+- .data: directorio oculto que se encarga de almacenar los datos del programa.
 - src: código fuente del proyecto.
   - model: package donde se encuentran las estructuras de datos.
   - test: package en el qué se ejecutan los test de todas las clases del proyecto.

@@ -10,7 +10,7 @@ public class NewCategoryView {
 	
 	public void printView() {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Product name: ");
+		System.out.print("Category name: ");
 		category = new Category(input.nextLine());
 	}
 

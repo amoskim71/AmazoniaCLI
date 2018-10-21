@@ -10,7 +10,7 @@ public class ShowProductView {
 		System.out.println("Name: " + name);
 		System.out.println("Prize: " + prize);
 		System.out.println("Amount: " + stock);
-		System.out.println("Amount: " + productId);
+		System.out.println("Product id: " + productId);
 		System.out.println("------------------------\n");
 	}
 }

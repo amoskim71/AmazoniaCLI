@@ -16,7 +16,6 @@ public class NewCategoryController extends Controller{
 		this.view = view;
 	}
 	
-	@Override
 	public void loadView() {
 		try {
 			view.printView();	
