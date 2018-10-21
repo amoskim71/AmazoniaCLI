@@ -28,6 +28,18 @@ public class User {
 		productHistory = new ArrayList();
 	}
 	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void copyUser(User another) {
+		this.userId = another.getUserId();
+		this.username = another.getUsername();
+		this.password = another.getPassword();
+		this.lastLogin = another.getLastLogin();
+		this.admin = another.isAdmin();
+		this.productHistory = another.getProductHistory();
+	}
 	/**
 	 * User can buy an amount of products.
 	 * 
