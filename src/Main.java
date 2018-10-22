@@ -30,13 +30,14 @@ public class Main {
 	
 	private static void printLogin() {
 		LoginView view = new LoginView();
-		Controller.clearView();
 		view.printView();
 		if(authentication(view.getUsername(), view.getPassword())) {
+			Controller.clearView();
 			System.out.println("Success login");
 			user.setLastLogin();
 		}else {
-			System.out.println("Incorrect username or password");
+			Controller.clearView();
+			System.out.println("----Incorrect username or password, try again!----\n");
 			printLogin();
 		}
 	}

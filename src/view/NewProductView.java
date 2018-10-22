@@ -16,8 +16,8 @@ public class NewProductView {
 		int categoryId = input.nextInt();
 		System.out.print("Stock: ");
 		int productStock = input.nextInt();
-		System.out.print("Prize: ");
-		double productPrize = (Double)input.nextDouble();
+		System.out.print("Prize (','): ");
+		double productPrize = input.nextDouble();
 		product = new Product(productName, categoryId, productStock, productPrize);
 	}
 

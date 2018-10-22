@@ -18,12 +18,12 @@ public class NewProductController extends Controller{
 	public void loadView() {
 		try {
 			view.printView();	
+			productList.add(view.getProduct());
 		}catch(Exception e){
 			clearView();
 			System.out.println("An error ocurred during input product. Please try again.\n");
 			loadView();
 		}
-		productList.add(view.getProduct());
 	}
 	
 }
