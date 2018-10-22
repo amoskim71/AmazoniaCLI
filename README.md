@@ -17,6 +17,7 @@ This software was created as a university practice. When the semester is over th
 
 ## Project tree
 
+- resources: store images to display in readme.
 - src: source code.
   - Main.java: main class.
   - model: package with all my data structures.
