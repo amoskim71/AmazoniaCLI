@@ -8,6 +8,9 @@ This software was created as a university practice. When the semester is over th
 
 - [Project tree](#project-tree)
 - [Usage](#usage)
+  -[Administrator](#administrator)
+  -[User](#user)
+  -[Model - View - Controller](#model-view-controller)
 - [Installation](#installation)
 - [Credits](#credits)
 - [License](#license)
@@ -28,16 +31,36 @@ This software was created as a university practice. When the semester is over th
 
 ## Usage
 
-#### Model - View - Controller
+### Administrator
+
+An administrator can create products and categories.
+
+![admin menu](./resources/admin.png)
+
+### User
+
+A user look all the products and from a category, can buy products and see their profiles.
+
+![user menu](./resources/user.png)
+
+### Model - View - Controller
 
 **Model**:
+
 - User: handle data of a user.
 - Product: handle data of a product.
 - Category: handle data of a category.
 
-**View**: class that have the ability to show the command line user interface such as BuyView or ProfileView.
+**View**:
 
-**Controller**: class that creates the conexions between the user interface (View) and the data structures (Model). All controllers class inhetire from class Controller.
+- Class that have the ability to show the command line user interface such as BuyView or ProfileView.
+
+![Profile view](./resources/profile.png)
+
+**Controller**:
+
+- Class that creates the connections between the user interface (View) and the data structures (Model).
+- All controllers class inherit from class Controller.
 
 ## Installation
 
