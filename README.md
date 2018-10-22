@@ -8,9 +8,9 @@ This software was created as a university practice. When the semester is over th
 
 - [Project tree](#project-tree)
 - [Usage](#usage)
-  -[Administrator](#administrator)
-  -[User](#user)
-  -[Model - View - Controller](#model-view-controller)
+  - [Administrator](#administrator)
+  - [User](#user)
+  - [Model - View - Controller](#model-view-controller)
 - [Installation](#installation)
 - [Credits](#credits)
 - [License](#license)
