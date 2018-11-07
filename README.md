@@ -1,6 +1,6 @@
 # Practice 1: Advanced Programming Techniques
 
-eCommerce is a software that manages products and categories of a store.
+Amazonia is a software that manages products and categories of a store.
 
 This software was created as a university practice. When the semester is over this repository will be archived and also will become private.
 
@@ -36,13 +36,13 @@ This software was created as a university practice. When the semester is over th
 
 An administrator can create products and categories.
 
-![admin menu](./resources/admin.png)
+![admin menu](./.resources/admin.png)
 
 ### User
 
 A user look all the products and from a category, can buy products and see their profiles.
 
-![user menu](./resources/user.png)
+![user menu](./.resources/user.png)
 
 ### Model - View - Controller
 
@@ -56,7 +56,7 @@ A user look all the products and from a category, can buy products and see their
 
 - Class that have the ability to show the command line user interface such as BuyView or ProfileView.
 
-![Profile view](./resources/profile.png)
+![Profile view](./.resources/profile.png)
 
 **Controller**:
 
