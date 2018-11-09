@@ -19,17 +19,19 @@ public class User {
 	private static int generateId = 0;
 	
 	public User(String email, String username,String password, boolean admin) {
-		this.userId = ++this.generateId;
+		this.userId = ++User.generateId;
 		this.email = email;
 		this.username = username;
 		this.password = password;
 		this.admin = admin;
 		lastLogin = new Date();
-		productHistory = new ArrayList();
+		productHistory = new ArrayList<Product>();
 	}
 	
 	public User() {
-		// TODO Auto-generated constructor stub
+		this.userId = ++User.generateId;
+		lastLogin = new Date();
+		productHistory = new ArrayList<Product>();
 	}
 	
 	public void copyUser(User another) {
@@ -40,6 +42,7 @@ public class User {
 		this.admin = another.isAdmin();
 		this.productHistory = another.getProductHistory();
 	}
+	
 	/**
 	 * User can buy an amount of products.
 	 * 
