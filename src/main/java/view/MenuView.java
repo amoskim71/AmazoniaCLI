@@ -2,7 +2,7 @@ package view;
 
 import java.util.Scanner;
 
-public class MenuView {
+public class MenuView extends View{
 	
 	private String selectOption;
 	
@@ -25,5 +25,11 @@ public class MenuView {
 
 	public String getSelectOption() {
 		return selectOption;
+	}
+
+	@Override
+	public void printView() {
+		// TODO Auto-generated method stub
+		
 	}
 }
