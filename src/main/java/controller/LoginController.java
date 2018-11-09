@@ -10,13 +10,13 @@ public class LoginController extends Controller{
 	private View view;
 	
 	public LoginController() {
-		this.view = new LoginMenuView();
+		this.view = new LoginView();
 		model = new User();
 	}
 	
 	public void loadView() {
 		view.printView();
-		switch(((LoginMenuView)view).getOption()) {
+		switch(((LoginView)view).getOption()) {
 			case 1:
 				view = new SignInView();
 				view.printView();
@@ -51,4 +51,6 @@ public class LoginController extends Controller{
 	public User getUser() {
 		return model;
 	}
+	
+	//TODO: implement authentication method and input/output scheme to login.
 }
