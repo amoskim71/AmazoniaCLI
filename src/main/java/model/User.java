@@ -138,7 +138,6 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [email=" + email + ", username=" + username + ", password=" + password + ", lastLogin=" + lastLogin
-				+ ", userId=" + userId + ", admin=" + admin + ", productHistory=" + productHistory + "]";
+		return email + ";" + username + ";" + password + ";" + String.valueOf(admin);
 	}
 }
