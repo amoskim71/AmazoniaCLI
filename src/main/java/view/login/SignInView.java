@@ -24,11 +24,9 @@ public class SignInView extends View{
 			System.out.println("------------");
 			switch(i) {
 				case 0:
-					System.out.println("To go back enter 'b'.");
 					System.out.println("Or enter your username.");
 					break;
 				case 1: 
-					System.out.println("To go back enter 'b'.");
 					System.out.println("Or enter your password.");
 					break;
 				default:

@@ -24,6 +24,7 @@ This software was created as a university practice. When the semester is over th
 - src: source code and tests.
   - main: all source code.
     - java: java files.
+      - Main.java: main class to execute program.
       - model: package with all my data structures.
       - controller: package with my controllers class.
       - view: package with all the views.
@@ -92,6 +93,8 @@ Output class manage to override the files mentioned above and maintain updated t
 ### Sign In - Sign Up
 
 Now in Amazonia you can sign in and sign up in a new login menu that have support with Input / Output classes. 
+
+![login](./.resources/login.png)
 
 ## Installation
 
