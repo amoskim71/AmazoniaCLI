@@ -1,11 +1,12 @@
-package controller;
+package controller.show;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
+import controller.Controller;
 import model.*;
-import view.ProfileView;
+import view.show.ProfileView;
 
 public class ProfileController extends Controller{
 	

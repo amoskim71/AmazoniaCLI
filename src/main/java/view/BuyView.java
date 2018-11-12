@@ -2,7 +2,7 @@ package view;
 
 import java.util.Scanner;
 
-import controller.ShowProductController;
+import controller.show.ShowProductController;
 
 public class BuyView {
 	

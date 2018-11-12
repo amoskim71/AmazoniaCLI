@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import controller.NewProductController;
+import controller.new_thing.NewProductController;
 import model.Category;
 import model.Product;
-import view.NewProductView;
+import view.newThing.NewProductView;
 
 class ProductTest {
 

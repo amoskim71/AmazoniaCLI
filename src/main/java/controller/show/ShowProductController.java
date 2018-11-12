@@ -1,9 +1,13 @@
-package controller;
+package controller.show;
 
 import java.util.List;
 import java.util.Scanner;
+
+import controller.BuyController;
+import controller.Controller;
 import model.*;
 import view.*;
+import view.show.ShowProductView;
 
 public class ShowProductController extends Controller{
 

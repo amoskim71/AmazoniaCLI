@@ -7,12 +7,12 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import controller.ShowProductController;
+import controller.show.ShowProductController;
 import exception.InputOutputException;
 import model.Category;
 import model.Product;
 import model.User;
-import view.ShowProductView;
+import view.show.ShowProductView;
 
 class InputTest {
 

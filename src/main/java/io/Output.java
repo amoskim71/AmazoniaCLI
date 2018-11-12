@@ -22,34 +22,34 @@ import model.User;
 public class Output {
 	public static void setUsersToDataBase(ArrayList<User> userList) {
 		try {
-			FileOutputStream fileOutput = new FileOutputStream(new File("./users.txt"));
+			FileOutputStream fileOutput = new FileOutputStream(new File("./.data/.users"));
 			ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput);
 			objectOutput.writeObject(userList);
 			objectOutput.close();
 		}catch(Exception e){
-			e.printStackTrace();
+			
 		}
 	}
 	
 	public static void setProductsToDataBase(ArrayList<Product> productList) {
 		try {
-			FileOutputStream fileOutput = new FileOutputStream(new File("./products.txt"));
+			FileOutputStream fileOutput = new FileOutputStream(new File("./.data/.products"));
 			ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput);
 			objectOutput.writeObject(productList);
 			objectOutput.close();
 		}catch(Exception e){
-			e.printStackTrace();
+			
 		}
 	}
 	
 	public static void setCategoriesToDataBase(ArrayList<Category> categoryList) {
 		try {
-			FileOutputStream fileOutput = new FileOutputStream(new File("./categories.txt"));
+			FileOutputStream fileOutput = new FileOutputStream(new File("./.data/.categories"));
 			ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput);
 			objectOutput.writeObject(categoryList);
 			objectOutput.close();
 		}catch(Exception e){
-			e.printStackTrace();
+			
 		}
 	}
 }
