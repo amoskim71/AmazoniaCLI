@@ -1,5 +1,7 @@
 /bin/
 /config
-/src/clases/
 /.DS_Store
 /src/model/.DS_Store
+/.data/.user
+/.data/.products
+/.data/.category

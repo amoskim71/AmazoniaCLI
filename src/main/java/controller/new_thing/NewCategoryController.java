@@ -1,10 +1,11 @@
-package controller;
+package controller.new_thing;
 
 import java.util.List;
 
+import controller.Controller;
 import model.Category;
-import view.NewCategoryView;
-import view.NewProductView;
+import view.newThing.NewCategoryView;
+import view.newThing.NewProductView;
 
 public class NewCategoryController extends Controller{
 

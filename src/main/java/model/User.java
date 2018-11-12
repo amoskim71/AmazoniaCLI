@@ -1,11 +1,12 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class User {
+public class User implements Serializable{
 	
 	private String email;
 	private String username;
@@ -13,6 +14,8 @@ public class User {
 	private Date lastLogin;
 	private int userId;
 	private boolean admin;
+	
+	private static final long serialVersionUID = 1L;
 	
 	private List<Product> productHistory;
 	
@@ -138,7 +141,6 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [email=" + email + ", username=" + username + ", password=" + password + ", lastLogin=" + lastLogin
-				+ ", userId=" + userId + ", admin=" + admin + ", productHistory=" + productHistory + "]";
+		return email + ";" + username + ";" + password + ";" + String.valueOf(admin);
 	}
 }

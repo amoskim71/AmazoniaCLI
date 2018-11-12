@@ -1,7 +1,10 @@
 package model;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
 	private int productId;
 	private String productName;
 	private int categoryId;
@@ -109,7 +112,6 @@ public class Product {
 	
 	@Override
 	public String toString() {
-		return "Product [productId=" + productId + ", productName=" + productName + ", categoryId=" + categoryId
-				+ ", productStock=" + productStock + ", productPrize=" + productPrize + "]";
+		return productName + ";" + categoryId + ";" + productStock + ";" + productPrize;
 	}
 }

@@ -4,11 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import controller.ProfileController;
+import controller.show.ProfileController;
 import model.Category;
 import model.Product;
 import model.User;
-import view.ProfileView;
+import view.show.ProfileView;
 
 class ProfileTest {
 

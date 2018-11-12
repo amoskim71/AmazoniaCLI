@@ -16,18 +16,17 @@ public class SignUpView extends View{
 	public void printView() {
 		Scanner input = new Scanner(System.in);
 		View.clearView();
-		System.out.println("--SIGN UN--");
+		System.out.println("--SIGN UP--");
 		System.out.println("------------");
-		System.out.println("To go back enter 'b'.");
-		System.out.println("------------\n");
 		System.out.print("email: ");
 		setEmail(input.nextLine());
 		System.out.print("username: ");
 		setUsername(input.nextLine());
 		System.out.print("password: ");
 		setPassword(input.nextLine());
-		System.out.print("admin: ");
+		System.out.print("admin('y' if yes): ");
 		setAdmin(input.nextLine());
+		System.out.println("------------\n");
 		view();
 		super.setNextView(true);
 	}

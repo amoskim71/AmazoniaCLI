@@ -1,11 +1,11 @@
-package view;
+package view.show;
 
 import java.awt.print.Book;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import controller.ShowProductController;
+import controller.show.ShowProductController;
 import model.*;
 
 public class ProfileView{

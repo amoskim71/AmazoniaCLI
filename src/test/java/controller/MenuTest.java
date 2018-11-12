@@ -21,8 +21,8 @@ class MenuTest {
 		Category books = new Category("Books");
 		Product product1 = new Product("The name of the wind", books.getCategoryId(), 70, 25.5);
 		Product product2 = new Product("The power of one", books.getCategoryId(), 5, 74.99);
-		List<Category> categoryList = new ArrayList();
-		List<Product> productList = new ArrayList();
+		ArrayList<Category> categoryList = new ArrayList();
+		ArrayList<Product> productList = new ArrayList();
 		categoryList.add(books);
 		productList.add(product1);
 		productList.add(product2);

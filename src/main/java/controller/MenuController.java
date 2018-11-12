@@ -2,8 +2,17 @@ package controller;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import controller.new_thing.NewCategoryController;
+import controller.new_thing.NewProductController;
+import controller.show.ProfileController;
+import controller.show.ShowProductController;
 import model.*;
 import view.*;
+import view.newThing.NewCategoryView;
+import view.newThing.NewProductView;
+import view.show.ProfileView;
+import view.show.ShowProductView;
 
 public class MenuController extends Controller{
 
