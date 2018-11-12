@@ -1,8 +1,13 @@
 package io;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 import model.Category;
 import model.Product;
@@ -15,53 +20,35 @@ import model.User;
  *
  */
 public class Output {
-	
-	private static FileWriter output;
-	
-	/**
-	 * Write user in a specified file in the project directory.
-	 * @param user
-	 */
-	public static void writeUser(User user) {
+	public static void setUsersToDataBase(ArrayList<User> userList) {
 		try {
-			output = new FileWriter(new File("./.data/.users"), true);
-			output.write(user + "\n");
-			output.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
+			FileOutputStream fileOutput = new FileOutputStream(new File("./users.txt"));
+			ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput);
+			objectOutput.writeObject(userList);
+			objectOutput.close();
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
 	
-	/**
-	 * Write product in a specified file in the project directory.
-	 * @param product
-	 */
-	public static void writeProduct(Product product) {
+	public static void setProductsToDataBase(ArrayList<Product> productList) {
 		try {
-			output = new FileWriter(new File("./.data/.products"), true);
-			output.write(product + "\n");
-			output.close();
-		}catch (IOException e) {
-			e.printStackTrace();
-		}catch (Exception e) {
+			FileOutputStream fileOutput = new FileOutputStream(new File("./products.txt"));
+			ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput);
+			objectOutput.writeObject(productList);
+			objectOutput.close();
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
 	
-	/**
-	 * Write category in a specified file in the project directory.
-	 * @param category
-	 */
-	public static void writeCategory(Category category) {
+	public static void setCategoriesToDataBase(ArrayList<Category> categoryList) {
 		try {
-			output = new FileWriter(new File("./.data/.category"), true);
-			output.write(category + "\n");
-			output.close();
-		}catch (IOException e) {
-			e.printStackTrace();
-		}catch (Exception e) {
+			FileOutputStream fileOutput = new FileOutputStream(new File("./categories.txt"));
+			ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput);
+			objectOutput.writeObject(categoryList);
+			objectOutput.close();
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
