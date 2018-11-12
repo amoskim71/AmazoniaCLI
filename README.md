@@ -1,4 +1,4 @@
-# Practice 1: Advanced Programming Techniques
+# Amazonia
 
 Amazonia is a software that manages products and categories of a store.
 
@@ -18,12 +18,19 @@ This software was created as a university practice. When the semester is over th
 ## Project tree
 
 - resources: store images to display in readme.
-- src: source code.
-  - Main.java: main class.
-  - model: package with all my data structures.
-  - test: package of all my tests.
-  - view: package with all the views.
-  - controller: package with my controllers class.
+- data: data is a hide directory that store program data as a hide file.
+- src: source code and tests.
+  - main: all source code.
+    - java: java files.
+      - model: package with all my data structures.
+      - controller: package with my controllers class.
+      - view: package with all the views.
+      - io: package with input/output classes.
+  - test: all tests.
+    - java: java files.
+      - model: package with all my data structures tests.
+      - controller: package with my controllers class tests.
+      - io: package with input/outputs classes.
 - .classpath: file of eclipse project.
 - .gitignore: ignore files of the project.
 - .project: file  of eclipse project.
