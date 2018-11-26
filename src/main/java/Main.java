@@ -1,36 +1,25 @@
-import java.util.ArrayList;
+import java.net.URL;
 
-import controller.LoginController;
-import io.Input;
-import io.Output;
-import model.*;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main{
-	
-	private static ArrayList<User> userList;
-	private static ArrayList<Product> productList;
-	private static ArrayList<Category> categoryList;
-	
-	private static User user;
-
+public class Main extends Application{
 	
 	public static void main(String[] args) {
-		retrieveFromDataBase();
-		LoginController login = new LoginController(user, userList, productList, categoryList);
-		login.loadView();
-		setToDataBase();
+		launch(args);
 	}
-	
-	
-	private static void retrieveFromDataBase() {
-		userList = Input.retrieveUsersFromDataBase();
-		productList = Input.retrieveProductsFromDataBase();
-		categoryList = Input.retrieveCategoriesFromDataBase();
+
+	@Override
+	public void start(Stage stage) throws Exception {
+		URL res = getClass().getClassLoader().getResource("login.fxml");
+		Parent root = FXMLLoader.load(res);
+		Scene scene = new Scene(root);
+		stage.setTitle("Amazonia");
+		stage.setScene(scene);
+		stage.show();
 	}
-	
-	private static void setToDataBase() {
-		Output.setUsersToDataBase(userList);
-		Output.setProductsToDataBase(productList);
-		Output.setCategoriesToDataBase(categoryList);
-	}
+
 }
