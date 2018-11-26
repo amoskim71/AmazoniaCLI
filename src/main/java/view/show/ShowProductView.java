@@ -1,16 +1,14 @@
 package view.show;
 
-import java.util.List;
-
-import model.Product;
+import main.Main;
 
 public class ShowProductView {	
 	public void printProduct(String name, double prize, int stock, int productId) {
 		System.out.println("------------------------");
-		System.out.println("Name: " + name);
-		System.out.println("Prize: " + prize + "€");
-		System.out.println("Amount: " + stock);
-		System.out.println("Product id: " + productId);
+		System.out.println(Main.getMessage("name")+": " + name);
+		System.out.println(Main.getMessage("prize")+"Prize: " + prize + "€");
+		System.out.println(Main.getMessage("stock") + ": " + stock);
+		System.out.println(Main.getMessage("Id") +": " + productId);
 		System.out.println("------------------------\n");
 	}
 }

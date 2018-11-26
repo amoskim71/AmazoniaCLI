@@ -2,6 +2,7 @@ package view.login;
 
 import java.util.Scanner;
 
+import main.Main;
 import view.View;
 
 public class SignInView extends View{
@@ -18,19 +19,19 @@ public class SignInView extends View{
 		Scanner input = new Scanner(System.in);
 		super.setNextView(true);
 		for(int i = 0; i < textField.length + 1; i++) {
-			System.out.println("--SIGN IN--");
-			System.out.println("username: " + textField[0]);
-			System.out.println("password: " + getHidePassword());
+			System.out.println("--"+ Main.getMessage("signInM") +"--");
+			System.out.println(Main.getMessage("username") + ": " + textField[0]);
+			System.out.println(Main.getMessage("password") + ":"  + getHidePassword());
 			System.out.println("------------");
 			switch(i) {
 				case 0:
-					System.out.println("Or enter your username.");
+					System.out.println(Main.getMessage("enterUsername"));
 					break;
 				case 1: 
-					System.out.println("Or enter your password.");
+					System.out.println(Main.getMessage("enterPassword"));
 					break;
 				default:
-					System.out.println("Press ENTER.");
+					System.out.println(Main.getMessage("pressEnter") + ".");
 					break;
 			}
 			System.out.println("------------\n");

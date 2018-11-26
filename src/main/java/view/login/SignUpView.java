@@ -2,6 +2,7 @@ package view.login;
 
 import java.util.Scanner;
 
+import main.Main;
 import view.View;
 
 public class SignUpView extends View{
@@ -16,15 +17,15 @@ public class SignUpView extends View{
 	public void printView() {
 		Scanner input = new Scanner(System.in);
 		View.clearView();
-		System.out.println("--SIGN UP--");
+		System.out.println("--"+ Main.getMessage("signUpM") +"--");
 		System.out.println("------------");
-		System.out.print("email: ");
+		System.out.print(Main.getMessage("email") + ": ");
 		setEmail(input.nextLine());
-		System.out.print("username: ");
+		System.out.print(Main.getMessage("username") + ": ");
 		setUsername(input.nextLine());
-		System.out.print("password: ");
+		System.out.print(Main.getMessage("password") + ": ");
 		setPassword(input.nextLine());
-		System.out.print("admin('y' if yes): ");
+		System.out.print(Main.getMessage("admin") + ": ");
 		setAdmin(input.nextLine());
 		System.out.println("------------\n");
 		view();
@@ -33,11 +34,11 @@ public class SignUpView extends View{
 	
 	private void view() {
 		View.clearView();
-		System.out.println("--SIGN UP--");
-		System.out.println("email: " + getEmail());
-		System.out.println("username: " + getUsername());
-		System.out.println("password: " + getPassword());
-		System.out.println("admin: " + isAdmin());
+		System.out.println("--"+ Main.getMessage("signInM") +"--");
+		System.out.println(Main.getMessage("email") + getEmail());
+		System.out.println(Main.getMessage("username") + getUsername());
+		System.out.println(Main.getMessage("password") + getPassword());
+		System.out.println(Main.getMessage("admin") + isAdmin());
 		System.out.println("------------");
 		View.pauseUntilInput();
 	}

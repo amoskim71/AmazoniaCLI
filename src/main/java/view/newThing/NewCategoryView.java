@@ -2,6 +2,7 @@ package view.newThing;
 
 import java.util.Scanner;
 
+import main.Main;
 import model.Category;
 
 public class NewCategoryView {
@@ -10,7 +11,7 @@ public class NewCategoryView {
 	
 	public void printView() {
 		Scanner input = new Scanner(System.in);
-		System.out.print("Category name: ");
+		System.out.print(Main.getMessage("categoryName") + ": ");
 		category = new Category(input.nextLine());
 	}
 

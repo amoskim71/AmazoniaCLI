@@ -2,7 +2,8 @@ package view;
 
 import java.util.Scanner;
 
-import controller.show.ShowProductController;
+import main.Main;
+ 
 
 public class BuyView {
 	
@@ -12,14 +13,14 @@ public class BuyView {
 	public void printInputProduct() {
 		Scanner input = new Scanner(System.in);
 		try {
-			System.out.println("\n----- BUY A PRODUCT (0 to cancel) -----");
-			System.out.print("Product id: ");
+			System.out.println("\n----- " + Main.getMessage("buyProductMenu") + " -----");
+			System.out.print(Main.getMessage("productId") + ": ");
 			id = input.nextInt();
-			System.out.print("Amount(default = 1): ");
+			System.out.print(Main.getMessage("amount_default") + ": ");
 			amount = input.nextInt();
 			amount = amount > 0 ? amount : 1;
 		}catch(Exception e) {
-			System.out.println("An input error has ocurred.");
+			System.out.println(Main.getMessage("inputErrorMessage"));
 			printInputProduct();
 		}
 		

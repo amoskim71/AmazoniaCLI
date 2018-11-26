@@ -1,6 +1,8 @@
 package view.login;
 
 import java.util.Scanner;
+
+import main.Main;
 import view.View;
 
 public class LoginView extends View{
@@ -10,10 +12,10 @@ public class LoginView extends View{
 	public void printView() {
 		try {
 			Scanner input = new Scanner(System.in);
-			System.out.println("----WELCOME TO AMAZONIA----");
-			System.out.println("1. Sign in.");
-			System.out.println("2. Sign up.");
-			System.out.println("3. Exit.");
+			System.out.println("----" + Main.getMessage("welcomeMessage") + "----");
+			System.out.println("1. "+ Main.getMessage("signIn") + ".");
+			System.out.println("2. "+ Main.getMessage("signUp") + ".");
+			System.out.println("3. " + Main.getMessage("exit") + ".");
 			System.out.println("---------------------------");
 			System.out.print(">>> ");
 			option = input.nextInt();
@@ -21,7 +23,7 @@ public class LoginView extends View{
 			super.setNextView(true);
 		}catch(Exception e) {
 			View.clearView();
-			System.out.println("ERROR: mismatch input, please choose a correct option.\n\n");
+			System.out.println(Main.getMessage("error_msg_mismatch") + "\n\n");
 			printView();
 		}
 	}
