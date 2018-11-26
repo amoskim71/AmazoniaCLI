@@ -6,6 +6,9 @@ public class MenuView extends View{
 	
 	private String selectOption;
 	
+	/*
+	 * If the user authenticates as administrator, this menu is displayed
+	 */
 	public void printView(boolean isAdmin) {
 		System.out.println("---- MENU ----\n");
 		Scanner input = new Scanner(System.in);

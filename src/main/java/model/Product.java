@@ -109,7 +109,10 @@ public class Product implements Serializable{
 	public void setProductPrize(double productPrize) {
 		this.productPrize = productPrize;
 	}
-	
+	/*
+	 * This method returns the name of the product, the id of the category, the stock of the product and the price of the product
+	 * 
+	 */
 	@Override
 	public String toString() {
 		return productName + ";" + categoryId + ";" + productStock + ";" + productPrize;
