@@ -88,7 +88,7 @@ public class MenuController extends Controller{
 					break;
 					
 				/*
-				 * 
+				 * Profile
 				 */
 				case "3":
 					clearView();
