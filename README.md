@@ -13,6 +13,7 @@ This software was created as a university practice. When the semester is over th
   - [Model - View - Controller](#model-view-controller)
   - [Input / Output](#input-output)
   - [Sign In - Sign up](#sign-in-sign-up)
+  - [Internationalization](#internationalization)
 - [Installation](#installation)
 - [Credits](#credits)
 - [License](#license)
@@ -92,9 +93,15 @@ Output class manage to override the files mentioned above and maintain updated t
 
 ### Sign In - Sign Up
 
-Now in Amazonia you can sign in and sign up in a new login menu that have support with Input / Output classes. 
+You can sign in and sign up in a new login menu that have support with Input / Output classes. 
 
-![login](./.resources/login.png)
+![login](./.resources/login.png) 
+
+### Internationalization
+
+Now Amazonia supports internationalization, user can choose the language before executing the Amazonia's login menu. If you want to contribute you can add some language support in the language files properties.
+
+At present language support: English and Spanish.
 
 ## Installation
 
@@ -102,7 +109,9 @@ To execute the software or change the source code I highly recommend to use Ecli
 
 ## Credits
 
-Creator of the project: [@joseluishozg](https://github.com/joseluishozg) & Colaborator of the project : [@andresbravom](https://github.com/andresbravom)
+Creator of the project: [@joseluishozg](https://github.com/joseluishozg)
+
+Colaborator of the project : [@andresbravom](https://github.com/andresbravom)
 
 ## License
 
