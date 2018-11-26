@@ -1,12 +1,10 @@
 package model;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class User implements Serializable{
+public class User{
 	
 	private String email;
 	private String username;
@@ -14,9 +12,7 @@ public class User implements Serializable{
 	private Date lastLogin;
 	private int userId;
 	private boolean admin;
-	
-	private static final long serialVersionUID = 1L;
-	
+		
 	private List<Product> productHistory;
 	
 	private static int generateId = 0;
@@ -28,13 +24,13 @@ public class User implements Serializable{
 		this.password = password;
 		this.admin = admin;
 		lastLogin = new Date();
-		productHistory = new ArrayList<Product>();
+		productHistory = new ArrayList<>();
 	}
 	
 	public User() {
 		this.userId = ++User.generateId;
 		lastLogin = new Date();
-		productHistory = new ArrayList<Product>();
+		productHistory = new ArrayList<>();
 	}
 	
 	public void copyUser(User another) {
@@ -54,11 +50,13 @@ public class User implements Serializable{
 	 */
 	public void buyProduct(Product productToBuy, int amount) {
 		//TODO: implement availableStock to know if i can buy an amount of products.
+		/*
 		productToBuy.setProductStock(productToBuy.getProductStock() - amount);
 		Product copy = new Product();
 		copy.copyProduct(productToBuy);
 		copy.setProductStock(amount);
 		productHistory.add(copy);
+		*/
 	}
 	
 	/**
@@ -77,7 +75,8 @@ public class User implements Serializable{
 	 * @return
 	 */
 	public boolean containsProduct(Product product) {
-		boolean contain = false;
+		//TODO
+		/*
 		for(int i = 0; i < productHistory.size(); i++) {
 			if(product.compareProduct(productHistory.get(i))) {
 				contain = true;
@@ -85,6 +84,8 @@ public class User implements Serializable{
 			}
 		}
 		return contain;
+		*/
+		return false;
 	}
 	
 	public Product getProductFromHistory(int index) {
@@ -141,6 +142,6 @@ public class User implements Serializable{
 
 	@Override
 	public String toString() {
-		return email + ";" + username + ";" + password + ";" + String.valueOf(admin);
+		return email + ";" + username + ";" + password + ";" + admin;
 	}
 }
