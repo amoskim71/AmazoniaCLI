@@ -103,6 +103,7 @@ To execute the software or change the source code I highly recommend to use Ecli
 ## Credits
 
 Creator of the project: [@joseluishozg](https://github.com/joseluishozg)
+Colaborator of the project : [@andresbravom](https://github.com/andresbravom)
 
 ## License
 
