@@ -138,9 +138,11 @@ public class User implements Serializable{
 	public int getUserId() {
 		return userId;
 	}
-
+/*
+ * This method returns the email, the user, the password and recognizes if it is administrator or not
+ */
 	@Override
 	public String toString() {
-		return email + ";" + username + ";" + password + ";" + String.valueOf(admin);
+		return email + ";" + username + ";" + password + ";" + admin;
 	}
 }
