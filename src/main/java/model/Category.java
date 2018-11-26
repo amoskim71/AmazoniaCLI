@@ -27,6 +27,11 @@ public class Category implements Serializable{
 		this.categoryName = categoryName;
 	}
 	
+	 
+	/*
+	 * 
+	 * Returns a string with information about the object that will later be used to write to a file
+	 */
 	@Override
 	public String toString() {
 		return categoryName + ";" + categoryId;

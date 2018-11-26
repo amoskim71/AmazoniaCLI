@@ -33,18 +33,28 @@ public class MenuController extends Controller{
 		view.printView(model.isAdmin());
 		if(model.isAdmin()) {
 			switch(view.getSelectOption()) {
+				/*
+				 * Add new product
+				 */
 				case "1":
 					clearView();
 					NewProductController product = new NewProductController(new NewProductView(), productList);
 					product.loadView();
 					loadView();
 					break; 
+					
+				/*
+				 * Add new category
+				 */
 				case "2":
 					clearView();
 					NewCategoryController category = new NewCategoryController(new NewCategoryView(), categoryList);
 					category.loadView();
 					loadView();
 					break;
+				/*
+				 * Exit
+				 */
 				case "3":
 					clearView();
 					ExitView exit = new ExitView();
@@ -58,13 +68,18 @@ public class MenuController extends Controller{
 		}else{
 			switch(view.getSelectOption()) {
 			
+				/*
+				 * Show product List
+				 */
 				case "1":
 					clearView();
 					ShowProductController productListView = new ShowProductController(new ShowProductView(), productList, model);
 					productListView.loadProductListView();
 					loadView();
 					break; 
-					
+				/*
+				 * Show product from category
+				 */
 				case "2":
 					clearView();
 					ShowProductController productsFromCategoryView = new ShowProductController(new ShowProductView(), productList, model);
@@ -72,6 +87,9 @@ public class MenuController extends Controller{
 					loadView();
 					break;
 					
+				/*
+				 * 
+				 */
 				case "3":
 					clearView();
 					ProfileController profile = new ProfileController(new ProfileView(), model);
