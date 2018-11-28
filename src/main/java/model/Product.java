@@ -18,6 +18,7 @@ public abstract class Product{
 	protected int stock;
 	protected Language language;
 	protected Department department;
+	//TODO: product release?
 	
 	public static final int TITLE_LENGTH = 30;
 	
